@@ -1,6 +1,6 @@
 ### 오답 노트
 
-- <!DOCTYPE html> 다음 <html>이 온다. 나는 당연히 <html>이 먼저 올 줄 알았다.
+- `<!DOCTYPE html>` 다음 `<html>`이 온다. 나는 당연히 `<html>`이 먼저 올 줄 알았다.
 - 스타일 적용 우선순위는 style > id > class > type이다. 나는 당연히 가장 나중에 속성을 정의한 부분이 적용될 줄 알았다. `sict`
 - 테두리 선, border 속성을 선언할 때는 border-width, border-style, border-color 순서로 작성한다. ex) 10px solid red. 나는 순서가 상관 없을 줄 알았다. `wsc`
 - 배경 주소를 입려할 땐 `background-image: url(elice_logo.png);` 처럼 url과 괄호 ( ) 로 감싼다.
