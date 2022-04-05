@@ -1,4 +1,2 @@
-# HTML과 CSS 자습
-+ HTML과 CSS로 짠 코드 저장소
+# elice-sw2-self-study
 + 엘리스 SW2 엔지니어 트랙 과정에서 연습한 코드를 저장하는 곳
-
