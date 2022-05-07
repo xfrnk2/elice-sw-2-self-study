@@ -658,6 +658,48 @@ printFirstChar(T param) 에서 param 변수의 타입은 T 로 아직 지정되
 ### **keyof**
 
 - 제네릭의 제약조건 중 하나이며, **두객체를 비교**할 때 사용한다.
+- keyof는 Object의 key들의 lieteral 값들을 가져온다.
+
+출처: [https://heropy.blog/2020/01/27/typescript/](https://heropy.blog/2020/01/27/typescript/)
+
+```tsx
+interface Person {
+    name: string
+    age: number
+}
+
+type Test = keyof Person// ("name", "age")
+```
+
+이 키워드를 Generic의 제한에도 활용이 가능하다. 이를테면 받은 인자의 literal 값을 이미 있는 것으로 제한하거나, 클래스의 멤버로 제한하고 싶은 경우이다. 이 역시 다음 코드를 보자.
+
+```r
+function setProperty<T, K extends keyof T>(obj: T, key: K, value: T[K]): void {
+    obj[key]=value
+}
+
+function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+    return obj[key]
+}
+
+setProperty(person, 'name', 'Anna')
+```
+
+위의 Person interface에 keyof를 가져오면 'name'과 'age'가 나온다. setProperty는 Person의 멤버 프로퍼티를 set하는 역할이므로, Person의 멤버를 넣어야 한다. 그러므로 Generic에 keyof를 통한 제한을 주는 것이다.
+
+Generic과는 별개이지만, enum과 같이 keyof 키워드를 활용할 수도 있다.
+
+```rust
+const SUBJECT = {
+    Math : 'Math',
+    English : 'English',
+} as const;
+type SUBJECT = typeof SUBJECT[keyof typeof SUBJECT];// 'Math' | 'English'
+```
+
+SUBJECT 객체에 typeof를 취하면 SUBJECT 자체가 나오고, 그에 keyof를 취하면 Math와 English가 나온다. 이것을 index로 하면 'Math'와 'English'가 나오게 되는데, 이것에 typeof를 취하면 literal type이 되므로, 이걸 Union한 타입이 type SUBJECT에 담기게 된다.
+
+즉, enum과 같게 SUBJECT['Math']를 사용할 수 있는 것이다. 아래 링크는 본인이 처음 참고했던 글이고, 자세하게 정리되어 있으니 ts에서의 enum에 대해 더 궁금하신 분들은 이쪽으로(참고 : [engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/](https://engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/) )
 
 ### constraints
 
