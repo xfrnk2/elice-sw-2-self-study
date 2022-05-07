@@ -738,3 +738,5 @@ taxi.park();
 3. ts-node로 typescript 를 실행하세요.**`ts-node index.ts`**
 
 **로컬에서 typescript 파일 실행 방법**로컬에서도 위와 마찬가지로 진행한 후 Code Runner(VScode extension)로 typescript 파일을 실행합니다.(1) 자바스크립트 엔진 (Node.js) 설치(2) 타입스크립트 설치(3) Code Runner extension을 설치(4) 실행하고자 하는 타입스크립트 파일(index.ts) 실행(**`npx ts-node index.ts`**)
+
+### Generic과 Interface를 사용한 예제
