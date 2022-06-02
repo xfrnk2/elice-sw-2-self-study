@@ -1,9 +1,12 @@
-const { Schema } = require("mongoose");
-const category = require("./category-schema");
+const { Schema } = require('mongoose');
 
 const ProductSchema = new Schema(
   {
-    category,
+    category: {
+      type: Schema.Types.ObjectId,
+      ref: 'Category',
+      required: true,
+    },
     name: {
       type: String,
       required: true,
@@ -12,18 +15,34 @@ const ProductSchema = new Schema(
       type: Number,
       required: true,
     },
+    imgUrl: {
+      type: String,
+      default: null,
+    },
     information: {
       type: String,
       required: true,
     },
-    manufacturer: {
+    author: {
+      type: String,
+      default: null,
+    },
+    publisher: {
       type: String,
       required: true,
+    },
+    publishedDate: {
+      type: String,
+      default: null,
+    },
+    orderCount: {
+      type: Number,
+      default: 0,
     },
   },
   {
     timestamps: true,
-  }
+  },
 );
 
-module.exports = ProductSchema;
+export { ProductSchema };

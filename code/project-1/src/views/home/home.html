@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>쇼핑-n팀</title>
+    <title>쇼핑-7팀</title>
     <!-- 아이콘 -->
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/elice-rabbit-favicon.png"
+      href="../elice-rabbit-favicon.png"
     />
     <!-- bulma css -->
     <link
@@ -23,58 +23,34 @@
       crossorigin="anonymous"
     ></script>
     <!-- 커스텀 css, js -->
-    <link rel="stylesheet" href="home.css" />
-    <script src="home.js" type="module" defer></script>
+    <link rel="stylesheet" href="../commonStyle.css" />
+    <script defer src="./imageSlider.js"></script>
+    <link rel="stylesheet" href="./imageSlider.css" />
+
+    <!-- template 파일에 header, scrollbtn, footer 모두 뿌려주는 코드 있음 -->
+    <script defer src="./template.js" type="module"></script>
+    <link rel="stylesheet" href="./template.css" />
   </head>
   <body>
-    <!-- 헤더 -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="container mt-3">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/">
-            <img src="/elice-rabbit.png" width="30" height="30" />
-            <span class="has-text-link">쇼핑-n팀</span>
-          </a>
+    <div class="container">
+      <div class="account">
+        <header>
+          <!-- 여기에 header 삽입됨 -->
+        </header>
 
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+        <div class="scroll_btn">
+          <!-- 여기에 scroll_btn 삽입됨 -->
         </div>
 
-          <div class="navbar-end breadcrumb my-auto" aria-label="breadcrumbs">
-            <ul id="navbar">
-              <li><a href="/login">로그인</a></li>
-              <li><a href="/register">회원가입</a></li>
-              <li>
-                <a href="#cart" aria-current="page">
-                  <span class="icon">
-                    <i class="fas fa-cart-shopping"></i>
-                  </span>
-                  <span>카트</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div class="slider-wrap" id="slider-wrap">
+          <!-- 여기에 image-slider 삽입됨 -->
         </div>
-      </div>
-    </nav>
 
-    <div class="div-container">
-      <div class="landing" id="landingDiv">
-        <h1>랜딩 페이지</h1>
-      </div>
-      <div class="greeting" id="greetingDiv">
-        <h1>안녕하세요!</h1>
+        <div style="width: 100px; height: 2000px; background-color: red"></div>
+        <footer>
+          <!-- 여기에 footer 삽입됨 -->
+        </footer>
       </div>
     </div>
-
   </body>
 </html>
