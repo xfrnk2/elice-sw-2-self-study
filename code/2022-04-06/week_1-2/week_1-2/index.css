@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    background-color: skyblue;
+}
+
+.nav {
+    background-color: gray;
+    text-align: center;
+    font-family: 'Rubik Moonrocks', cursive;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 20px 50px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color ease-in 300ms, color ease-in 300ms;
+}
+
+.nav-btn:hover {
+    background-color: aquamarine;
+    color: white;
+}

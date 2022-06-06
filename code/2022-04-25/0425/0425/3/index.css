@@ -1,0 +1,25 @@
+.container {
+  height: 100vh;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.item {
+  max-width: 300px;
+}
+
+.label {
+  width: 4rem;
+  display: block;
+}
+
+ol {
+  float: left;
+  padding: 0 1rem 0 0;
+}
+
+li {
+  list-style: none;
+}
